@@ -30,8 +30,10 @@ public class RNConekta extends ReactContextBaseJavaModule {
     public void createToken(ReadableMap info, final Callback successCallback, final Callback failureCallback) {
 
         String publicKey = info.getString("publicKey");
+        String lang = info.getString("lang");
 
         Conekta.setPublicKey(publicKey);
+        Conekta.setLanguage(lang);
 
         if ( isCollected ) {
             isCollected = true;

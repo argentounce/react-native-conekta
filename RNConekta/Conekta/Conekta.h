@@ -18,6 +18,7 @@
 
 @property (nonatomic, retain) NSString *baseURI;
 @property (nonatomic, retain) NSString *publicKey;
+@property (nonatomic, retain) NSString *lang;
 @property (nonatomic, retain) UIViewController *delegate;
 
 - (NSString *) deviceFingerprint;

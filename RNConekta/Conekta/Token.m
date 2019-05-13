@@ -37,6 +37,7 @@
     [urlRequest addValue:[NSString stringWithFormat:@"Basic %@", [self apiKeyBase64:[self publicKey]]] forHTTPHeaderField:@"Authorization"];
     [urlRequest addValue:@"application/json" forHTTPHeaderField: @"Content-type"];
     [urlRequest addValue:@"application/vnd.conekta-v0.3.0+json" forHTTPHeaderField: @"Accept"];
+    [urlRequest addValue:[self lang]  forHTTPHeaderField: @"Accept-Language"];
     [urlRequest addValue:@"{\"agent\":\"Conekta iOS SDK\"}" forHTTPHeaderField: @"Conekta-Client-User-Agent"];
     
     [urlRequest setHTTPBody:[[self card] asJSONData]];

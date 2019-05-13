@@ -51,6 +51,7 @@ UIWebView *web;
 - (Token *) Token
 {
     Token *token = [[Token alloc] init];
+    [token setLang:[self lang]];
     return [self populate:token];
 }
 

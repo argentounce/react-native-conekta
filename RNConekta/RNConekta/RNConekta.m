@@ -45,6 +45,9 @@ RCT_EXPORT_METHOD(createToken:(NSDictionary *)info
     NSString *cvc = [RCTConvert NSString:info[@"cvc"]];
     NSString *expMonth = [RCTConvert NSString:info[@"expMonth"]];
     NSString *expYear = [RCTConvert NSString:info[@"expYear"]];
+
+    NSString *lang = [RCTConvert NSString:info[@"lang"]];
+    [conekta setLang:lang];
     
     Card *card = [conekta.Card initWithNumber: cardNumber name: cardHolder cvc: cvc expMonth: expMonth expYear: expYear];
     
